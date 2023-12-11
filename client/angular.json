@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "client": {
+    "Client": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,14 +16,15 @@
             "outputPath": "dist/client",
             "index": "src/index.html",
             "main": "src/main.ts",
+<<<<<<< HEAD
             "polyfills": [
               "zone.js"
             ],
+=======
+            "polyfills": ["zone.js"],
+>>>>>>> 78b2622e97bf94603f722434319ef497f1aad0d8
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -68,10 +69,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "browserTarget": "client:build:production"
             },
             "development": {
               "browserTarget": "client:build:development"
+=======
+              "browserTarget": "Client:build:production"
+            },
+            "development": {
+              "browserTarget": "Client:build:development"
+>>>>>>> 78b2622e97bf94603f722434319ef497f1aad0d8
             }
           },
           "defaultConfiguration": "development"
@@ -79,24 +87,20 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "client:build"
+=======
+            "browserTarget": "Client:build"
+>>>>>>> 78b2622e97bf94603f722434319ef497f1aad0d8
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           }
         }
