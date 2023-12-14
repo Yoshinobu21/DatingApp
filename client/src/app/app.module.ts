@@ -11,10 +11,12 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 >>>>>>> 78b2622e97bf94603f722434319ef497f1aad0d8
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
