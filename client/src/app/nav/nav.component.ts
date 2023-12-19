@@ -7,7 +7,7 @@ import { AccountService } from '../_services/account.service';
   styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
-  model: any;
+  model: any = {};
   loggedIn = false;
 
   constructor(private accountService: AccountService) {
@@ -26,6 +26,10 @@ export class NavComponent implements OnInit {
       },
       error: error => console.log(error)
     })
+  }
+
+  logout() {
+    this.loggedIn = false
   }
 
 }
