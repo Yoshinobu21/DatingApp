@@ -3,22 +3,23 @@ using API.Interfaces;
 using API.Services;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Extensions;
-
-public static class ApplicationServicesExtensions
+namespace API.Extensions
 {
-    public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
-
+    public static class ApplicationServicesExtensions
     {
-        services.AddDbContext<DataContext>(opt =>
-{
-    opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
-}
-);
-        services.AddCors();
-        services.AddScoped<ITokenService, TokenService>();
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
 
-        return services;
+        {
+            services.AddDbContext<DataContext>(opt =>
+    {
+        opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
     }
+    );
+            services.AddCors();
+            services.AddScoped<ITokenService, TokenService>();
 
+            return services;
+        }
+
+    }
 }
