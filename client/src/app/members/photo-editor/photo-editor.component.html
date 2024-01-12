@@ -10,8 +10,8 @@
       >
         Main
       </button>
-      <button class="btn-sm btn-danger"><i class="fa fa-trash"></i></button>
-    </div>
+      <button class="btn-sm btn-danger" [disabled]="photo.isMain" (click)="deletePhoto(photo.id)"><i class="fa fa-trash"></i></button>
+    </div>  
   </div>
 </div>
 <div class="row">
