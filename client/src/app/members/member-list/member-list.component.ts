@@ -17,7 +17,7 @@ export class MemberListComponent implements OnInit {
   pagination: Pagination | undefined;
   userParams: UserParams | undefined;
   user: User | undefined;
-  genderlist = [
+  genderList = [
     { value: 'male', display: 'Male' },
     { value: 'female', display: 'Female' },
   ];
