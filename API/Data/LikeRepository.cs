@@ -1,4 +1,4 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
 using API.Data;
 using API.DTOs;
 using API.Entities;
