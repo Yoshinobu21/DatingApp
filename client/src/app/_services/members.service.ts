@@ -131,7 +131,7 @@ export class MembersService {
 
 
   addLike(username: string) {
-    return this.http.post(this.baseUrl + 'like' + username, {})
+    return this.http.post(this.baseUrl + 'like/' + username, {})
   }
 
   getLikes(predicate: string) {
